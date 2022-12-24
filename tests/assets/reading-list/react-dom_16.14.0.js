@@ -12548,7 +12548,7 @@
               newBaseQueueLast = newBaseQueueLast.next = _clone;
             } // Mark the event time of this update as relevant to this render pass.
             // TODO: This should ideally use the true event time of this update rather than
-            // its priority which is a derived and not reverseable value.
+            // its priority which is a derived and not reversible value.
             // TODO: We should skip this update if it was already committed but currently
             // we have no way of detecting the difference between a committed and suspended
             // update here.
@@ -15253,7 +15253,7 @@
             newBaseQueueLast = newBaseQueueLast.next = _clone;
           } // Mark the event time of this update as relevant to this render pass.
           // TODO: This should ideally use the true event time of this update rather than
-          // its priority which is a derived and not reverseable value.
+          // its priority which is a derived and not reversible value.
           // TODO: We should skip this update if it was already committed but currently
           // we have no way of detecting the difference between a committed and suspended
           // update here.
@@ -17088,7 +17088,7 @@
           // The pending update priority was cleared at the beginning of
           // beginWork. We're about to bail out, but there might be additional
           // updates at a lower priority. Usually, the priority level of the
-          // remaining updates is accumlated during the evaluation of the
+          // remaining updates is accumulated during the evaluation of the
           // component (i.e. when processing the update queue). But since since
           // we're bailing out early *without* evaluating the component, we need
           // to account for it here, too. Reset to the value of the current fiber.
